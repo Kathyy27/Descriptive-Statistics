@@ -1,0 +1,15 @@
+---
+title: "Descriptive Statistics"
+author: "Katherine Liwag"
+output: html_document
+---
+
+# Print the first 6 rows
+```{r}
+head(my_data, 6)
+```
+
+
+
+
+
