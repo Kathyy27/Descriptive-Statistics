@@ -4,10 +4,112 @@ author: "Katherine Liwag"
 output: html_document
 ---
 
-# Print the first 6 rows
+```{r}
+my_data <- read.csv(file.choose())
+```
+
+```{r}
+my_data <- iris
+```
+
 ```{r}
 head(my_data, 6)
 ```
+
+```{r}
+mean(my_data$Sepal.Length)
+```
+
+```{r}
+median(my_data$Sepal.Length)
+```
+
+```{r}
+require(modeest)
+mfv(my_data$Sepal.Length)
+```
+
+```{r}
+min(my_data$Sepal.Length)
+```
+
+```{r}
+max(my_data$Sepal.Length)
+```
+
+```{r}
+range(my_data$Sepal.Length)
+```
+
+```{r}
+quantile(my_data$Sepal.Length)
+```
+
+```{r}
+quantile(my_data$Sepal.Length, seq(0, 1, 0.1))
+```
+
+```{r}
+IQR(my_data$Sepal.Length)
+```
+
+```{r}
+var(my_data$Sepal.Length)
+```
+
+```{r}
+sd(my_data$Sepal.Length)
+```
+
+```{r}
+median(my_data$Sepal.Length)
+```
+
+```{r}
+mad(my_data$Sepal.Length)
+```
+
+```{r}
+summary(my_data$Sepal.Length)
+```
+
+```{r}
+summary(my_data, digits = 1)
+```
+
+```{r}
+sapply(my_data[, -5], mean)
+```
+
+```{r}
+sapply(my_data[, -5], quantile)
+```
+
+```{r}
+install.packages("pastecs")
+```
+
+```{r}
+library(pastecs)
+res <- stat.desc(my_data[, -5])
+round(res, 2)
+```
+
+```{r}
+mean(my_data$Sepal.Length, na.rm = TRUE)
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
